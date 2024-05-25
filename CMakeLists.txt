@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(DSA main.cpp
         LinkedLists.cpp
         LinkedLists/LL1.cpp
-        LinkedLists/LL1.h)
+        LinkedLists/LL1.h
+        Stack.cpp)
