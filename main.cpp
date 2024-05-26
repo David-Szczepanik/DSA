@@ -1,13 +1,17 @@
 void LinkedLists();
-// void LL1();
-// #include "LinkedLists/LL1.h"
 void Stack();
+
+// PRAC
+#include "LinkedLists/LL1.h"
+
 
 int main()
 {
     // LinkedLists();
-    // LL1Namespace::LL1();
-    Stack();
+    // Stack();
 
-    return 0;
+
+
+
+    LL1Namespace::LL1();
 }
