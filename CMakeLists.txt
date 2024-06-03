@@ -3,8 +3,10 @@ project(DSA)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(DSA main.cpp
-        LinkedLists.cpp
-        LinkedLists/LL1.cpp
-        LinkedLists/LL1.h
-        Stack.cpp)
+add_executable(DSA src/main.cpp
+        src/LinkedList.cpp
+        src/Stack.cpp
+        src/Queue.cpp
+        src/main_page.cpp
+        src/Map.cpp
+        src/Map.cpp)

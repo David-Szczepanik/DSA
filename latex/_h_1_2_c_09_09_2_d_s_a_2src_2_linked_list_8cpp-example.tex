@@ -1,0 +1,94 @@
+\doxysection{H\+:/\+C++/\+DSA/src/\+Linked\+List.\+cpp}
+\hypertarget{_h_1_2_c_09_09_2_d_s_a_2src_2_linked_list_8cpp-example}{}\label{_h_1_2_c_09_09_2_d_s_a_2src_2_linked_list_8cpp-example}Function demonstrating various operations on a linked list.
+
+Function demonstrating various operations on a linked list This function creates a linked list with three nodes, then demonstrates various operations such as inserting a node at the front, at the end, and after a given node.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}}\ \{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{int}\ Value;}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_node}{Node}}*\ Next;}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{_linked_list_8cpp_a3a438ad95dc2ab696e5567cfcc8b2bda}{printList}}(\mbox{\hyperlink{class_node}{Node}}*\ n)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}\ (n\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ n-\/>Value\ <<\ endl;}
+\DoxyCodeLine{\ \ \ \ n\ =\ n-\/>Next;}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{_linked_list_8cpp_ac6555851f046f97b34cc97172e1798e9}{insertAtTheFront}}(\mbox{\hyperlink{class_node}{Node}}**\ head,\ \textcolor{keywordtype}{int}\ newValue)\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//1.\ Prepare\ newNode}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_node}{Node}}();}
+\DoxyCodeLine{\ \ newNode-\/>Value\ =\ newValue;}
+\DoxyCodeLine{\ \ \textcolor{comment}{//2.\ Put\ in\ front\ of\ current\ head}}
+\DoxyCodeLine{\ \ newNode-\/>Next\ =\ *head;}
+\DoxyCodeLine{\ \ \textcolor{comment}{//3.\ Move\ head\ of\ the\ list\ to\ point\ to\ newNode}}
+\DoxyCodeLine{\ \ *head\ =\ newNode;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{_linked_list_8cpp_ade2f22acf47be4b9f7d360138da53d61}{insertAtTheEnd}}(\mbox{\hyperlink{class_node}{Node}}**\ head,\ \textcolor{keywordtype}{int}\ newValue)\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//1.\ Prepare\ newNode}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_node}{Node}}();}
+\DoxyCodeLine{\ \ newNode-\/>Value\ =\ newValue;}
+\DoxyCodeLine{\ \ newNode-\/>Next\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\ \ \textcolor{comment}{//2.\ If\ Linked\ list\ is\ empty,\ newNode\ will\ be\ head\ node}}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (*head\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\ \ \ \ *head\ =\ newNode;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//3.\ Find\ the\ last\ node}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_node}{Node}}*\ last\ =\ *head;}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}\ (last-\/>Next\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\ \ \ \ last\ =\ last-\/>Next;}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//4.\ Insert\ newNode\ after\ last\ node\ (at\ the\ end)}}
+\DoxyCodeLine{\ \ last-\/>Next\ =\ newNode;\ \textcolor{comment}{//\ last\ node\ will\ point\ to\ the\ newNode}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{_linked_list_8cpp_a5e78b777f5dc482e9b963a82c1af97fa}{insertAfter}}(\mbox{\hyperlink{class_node}{Node}}*\ previous,\ \textcolor{keywordtype}{int}\ newValue)\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//1.\ Check\ if\ previous\ node\ is\ NULL}}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (previous\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Previous\ can\ not\ be\ NULL"{}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//2.\ Prepare\ a\ newNode}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_node}{Node}}*\ newNode\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_node}{Node}}();}
+\DoxyCodeLine{\ \ newNode-\/>Value\ =\ newValue;}
+\DoxyCodeLine{\ \ \textcolor{comment}{//3.\ Insert\ newNode\ after\ previous}}
+\DoxyCodeLine{\ \ newNode-\/>Next\ =\ previous-\/>Next;}
+\DoxyCodeLine{\ \ previous-\/>Next\ =\ newNode;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ LinkedLists()\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_node}{Node}}*\ head\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_node}{Node}}();}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_node}{Node}}*\ second\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_node}{Node}}();}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{class_node}{Node}}*\ third\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_node}{Node}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ head-\/>Value\ =\ 1;}
+\DoxyCodeLine{\ \ head-\/>Next\ =\ second;}
+\DoxyCodeLine{\ \ second-\/>Value\ =\ 2;}
+\DoxyCodeLine{\ \ second-\/>Next\ =\ third;}
+\DoxyCodeLine{\ \ third-\/>Value\ =\ 3;}
+\DoxyCodeLine{\ \ third-\/>Next\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{_linked_list_8cpp_ac6555851f046f97b34cc97172e1798e9}{insertAtTheFront}}(\&head,\ -\/0);}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{_linked_list_8cpp_ac6555851f046f97b34cc97172e1798e9}{insertAtTheFront}}(\&head,\ -\/1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ insertAtTheEnd(\&head,\ 4);}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ insertAtTheEnd(\&head,\ 5);}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ insertAfter(head,\ -\/10);}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ insertAfter(second,\ -\/5);}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{_linked_list_8cpp_a3a438ad95dc2ab696e5567cfcc8b2bda}{printList}}(head);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

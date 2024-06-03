@@ -1,0 +1,5 @@
+body .textblock h2:before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+color: red;
+}

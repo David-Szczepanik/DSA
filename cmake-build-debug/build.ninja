@@ -49,29 +49,41 @@ cmake_ninja_workdir = H$:/C++/DSA/cmake-build-debug/
 
 build cmake_object_order_depends_target_DSA: phony || CMakeFiles/DSA.dir
 
-build CMakeFiles/DSA.dir/main.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/main.cpp || cmake_object_order_depends_target_DSA
-  DEP_FILE = CMakeFiles\DSA.dir\main.cpp.obj.d
+build CMakeFiles/DSA.dir/src/main.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/src/main.cpp || cmake_object_order_depends_target_DSA
+  DEP_FILE = CMakeFiles\DSA.dir\src\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\DSA.dir
-  OBJECT_FILE_DIR = CMakeFiles\DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\DSA.dir\src
 
-build CMakeFiles/DSA.dir/LinkedLists.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/LinkedLists.cpp || cmake_object_order_depends_target_DSA
-  DEP_FILE = CMakeFiles\DSA.dir\LinkedLists.cpp.obj.d
+build CMakeFiles/DSA.dir/src/LinkedList.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/src/LinkedList.cpp || cmake_object_order_depends_target_DSA
+  DEP_FILE = CMakeFiles\DSA.dir\src\LinkedList.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\DSA.dir
-  OBJECT_FILE_DIR = CMakeFiles\DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\DSA.dir\src
 
-build CMakeFiles/DSA.dir/LinkedLists/LL1.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/LinkedLists/LL1.cpp || cmake_object_order_depends_target_DSA
-  DEP_FILE = CMakeFiles\DSA.dir\LinkedLists\LL1.cpp.obj.d
+build CMakeFiles/DSA.dir/src/Stack.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/src/Stack.cpp || cmake_object_order_depends_target_DSA
+  DEP_FILE = CMakeFiles\DSA.dir\src\Stack.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\DSA.dir
-  OBJECT_FILE_DIR = CMakeFiles\DSA.dir\LinkedLists
+  OBJECT_FILE_DIR = CMakeFiles\DSA.dir\src
 
-build CMakeFiles/DSA.dir/Stack.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/Stack.cpp || cmake_object_order_depends_target_DSA
-  DEP_FILE = CMakeFiles\DSA.dir\Stack.cpp.obj.d
+build CMakeFiles/DSA.dir/src/Queue.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/src/Queue.cpp || cmake_object_order_depends_target_DSA
+  DEP_FILE = CMakeFiles\DSA.dir\src\Queue.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\DSA.dir
-  OBJECT_FILE_DIR = CMakeFiles\DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\DSA.dir\src
+
+build CMakeFiles/DSA.dir/src/main_page.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/src/main_page.cpp || cmake_object_order_depends_target_DSA
+  DEP_FILE = CMakeFiles\DSA.dir\src\main_page.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\DSA.dir\src
+
+build CMakeFiles/DSA.dir/src/Map.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C++/DSA/src/Map.cpp || cmake_object_order_depends_target_DSA
+  DEP_FILE = CMakeFiles\DSA.dir\src\Map.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\DSA.dir\src
 
 
 # =============================================================================
@@ -81,7 +93,7 @@ build CMakeFiles/DSA.dir/Stack.cpp.obj: CXX_COMPILER__DSA_unscanned_Debug H$:/C+
 #############################################
 # Link the executable DSA.exe
 
-build DSA.exe: CXX_EXECUTABLE_LINKER__DSA_Debug CMakeFiles/DSA.dir/main.cpp.obj CMakeFiles/DSA.dir/LinkedLists.cpp.obj CMakeFiles/DSA.dir/LinkedLists/LL1.cpp.obj CMakeFiles/DSA.dir/Stack.cpp.obj
+build DSA.exe: CXX_EXECUTABLE_LINKER__DSA_Debug CMakeFiles/DSA.dir/src/main.cpp.obj CMakeFiles/DSA.dir/src/LinkedList.cpp.obj CMakeFiles/DSA.dir/src/Stack.cpp.obj CMakeFiles/DSA.dir/src/Queue.cpp.obj CMakeFiles/DSA.dir/src/main_page.cpp.obj CMakeFiles/DSA.dir/src/Map.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\DSA.dir
@@ -96,7 +108,7 @@ build DSA.exe: CXX_EXECUTABLE_LINKER__DSA_Debug CMakeFiles/DSA.dir/main.cpp.obj 
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D H:\C++\DSA\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D H:\C++\DSA\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -107,7 +119,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D H:\C++\DSA\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SH:\C++\DSA -BH:\C++\DSA\cmake-build-debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D H:\C++\DSA\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SH:\C++\DSA -BH:\C++\DSA\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
