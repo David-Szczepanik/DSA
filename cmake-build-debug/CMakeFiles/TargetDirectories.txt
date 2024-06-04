@@ -1,3 +1,0 @@
-H:/C++/DSA/cmake-build-debug/CMakeFiles/DSA.dir
-H:/C++/DSA/cmake-build-debug/CMakeFiles/edit_cache.dir
-H:/C++/DSA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
