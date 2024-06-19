@@ -27,6 +27,39 @@ void printList(Node* n) {
 }
 
 /**
+ * @brief Function to print elementes in order using Recursion
+ * @param n Pointer to the head of the list
+ */
+void PrintR(Node* n) {
+  if (n == nullptr) {
+    return;
+  }
+  cout << n->Value;
+  PrintR(n->Next);
+}
+
+/**
+ * @brief Function to print elements in reverse order using Recursion
+ * @param n Pointer to the head of the list
+ */
+void ReversePrint(Node* n) {
+  if (n == nullptr) {
+    return;
+  }
+  ReversePrint(n->Next);
+  cout << n->Value;
+}
+
+// Node* ReverseList(Node* n) {
+//   if (n->Next == nullptr) {
+//     return n;
+//   }
+//   ReverseList(n->Next);
+//   n->Next->Next = n;
+//   n->Next = nullptr;
+// }
+
+/**
  * @brief Function to insert a new node at the front of a linked list
  * @param head Double pointer to the head of the list
  * @param newValue The value to be inserted
@@ -102,14 +135,19 @@ void LinkedLists() {
   third->Next = nullptr;
 
 
-  insertAtTheFront(&head, -0);
-  insertAtTheFront(&head, -1);
+  // insertAtTheFront(&head, -0);
+  // insertAtTheFront(&head, -1);
 
-  // insertAtTheEnd(&head, 4);
-  // insertAtTheEnd(&head, 5);
+  insertAtTheEnd(&head, 4);
+  insertAtTheEnd(&head, 5);
 
   // insertAfter(head, -10);
   // insertAfter(second, -5);
 
+  // printList(head);
+  ReverseList(head);
   printList(head);
+
+  // ReversePrint(head);
+  // PrintR(head);
 }

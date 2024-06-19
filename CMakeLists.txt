@@ -9,4 +9,5 @@ add_executable(DSA src/main.cpp
         src/Queue.cpp
         src/main_page.cpp
         src/Map.cpp
-        src/Map.cpp)
+        src/Map.cpp
+)
